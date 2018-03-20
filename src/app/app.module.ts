@@ -8,6 +8,7 @@ import {CoreModule} from '@app/core/core.module';
 import {PagesModule} from "@app/pages/pages.module";
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
+import {FlashMessagesModule, FlashMessagesService} from "angular2-flash-messages";
 
 
 @NgModule({
@@ -20,9 +21,11 @@ import {HttpClientModule} from "@angular/common/http";
         FormsModule,
         HttpClientModule,
         CoreModule,
-        PagesModule
+        PagesModule,
+        FlashMessagesModule
+
     ],
-    providers: [],
+    providers: [FlashMessagesService],
     bootstrap: [AppComponent]
 })
 export class AppModule {
